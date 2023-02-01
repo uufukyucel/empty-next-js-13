@@ -1,7 +1,7 @@
-import '@/assets/styles/reset.css'
 import {getDictionary} from "@/app/[lang]/dictionaries";
-export default async function Home({params: {lang}}) {
-    const dict = await getDictionary(lang); // en
+
+export default async function Test({params}) {
+    const dict = await getDictionary(params.lang); // en
     return (
         <div>
             <button>{dict.title}</button>
